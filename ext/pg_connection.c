@@ -4203,7 +4203,7 @@ pgconn_set_default_encoding( VALUE self )
 {
 	PGconn *conn = pg_get_pgconn( self );
 	rb_encoding *rb_enc;
-	printf("checkingggg");
+	printf("checkingggg from default encoding");
 
 	rb_check_frozen(self);
 	if (( rb_enc = rb_default_internal_encoding() )) {
@@ -4228,6 +4228,7 @@ pgconn_set_default_encoding( VALUE self )
 		pgconn_set_internal_encoding_index( self );
 		return rb_enc_from_encoding( rb_enc );
 	} else {
+		printf("else bhaaauuuuu");
 		pgconn_set_internal_encoding_index( self );
 		return Qnil;
 	}
