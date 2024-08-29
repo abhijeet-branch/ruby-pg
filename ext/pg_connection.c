@@ -271,6 +271,7 @@ pgconn_s_allocate( VALUE klass )
 static VALUE
 pgconn_s_sync_connect(int argc, VALUE *argv, VALUE klass)
 {
+	rb_warning( "RAANNNDDDDDDOOOOMMM log");
 	t_pg_connection *this;
 	VALUE conninfo;
 	VALUE self = pgconn_s_allocate( klass );
