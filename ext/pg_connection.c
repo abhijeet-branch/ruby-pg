@@ -4204,6 +4204,7 @@ pgconn_set_default_encoding( VALUE self )
 	PGconn *conn = pg_get_pgconn( self );
 	rb_encoding *rb_enc;
 	printf("checkingggg");
+	rb_raise(rb_eArgError,"testing something randooommmm");
 
 	rb_check_frozen(self);
 	if (( rb_enc = rb_default_internal_encoding() )) {
