@@ -4224,6 +4224,7 @@ pgconn_set_default_encoding( VALUE self )
 				rb_warning( "Failed to set the default_internal encoding to %s: '%s'",
 								encname, PQerrorMessage(conn) );
 		}
+		printf("after ifff");
 		pgconn_set_internal_encoding_index( self );
 		return rb_enc_from_encoding( rb_enc );
 	} else {
