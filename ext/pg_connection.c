@@ -4210,7 +4210,9 @@ pgconn_set_default_encoding( VALUE self )
 		/* Don't set the server encoding, if it's unnecessary.
 		 * This is important for connection proxies, who disallow configuration settings.
 		 */
+		rb_warning( "CHEEECCKKKIIIJNNNNGGGGHGGG #######");
 		if ( conn_encoding != rb_enc ) {
+			rb_warning( "NOT EQUALLLALALALALLA");
 			const char *encname = pg_get_rb_encoding_as_pg_encoding( rb_enc );
 			if ( pgconn_set_client_encoding_async(self, rb_str_new_cstr(encname)) != 0 )
 				rb_warning( "Failed to set the default_internal encoding to %s: '%s'",
